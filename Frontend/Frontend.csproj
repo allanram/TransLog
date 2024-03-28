@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Icons\" />
-    <Folder Include="Model\Response\" />
   </ItemGroup>
 
 </Project>
