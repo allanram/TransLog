@@ -1,0 +1,47 @@
+﻿@page "/carga"
+@using Frontend.Model.Request;
+
+<EditForm Model ="_cargaTransporte">
+    <DataAnnotationsValidator/>
+    <form>
+        <div class="form-row">
+            <div class="col-md-4">
+                <label >Nome</label>
+                <InputText @bind-Value="_cargaTransporte.Nome"></InputText>
+            </div>
+            <div class="col-md-6">
+                <label >Distancia</label>
+                <InputText @bind-Value="_cargaTransporte.Distancia"></InputText>
+            </div>
+        </div>
+        <div class="form-group">
+            <label >PESO</label>
+            <InputText @bind-Value="_cargaTransporte.Peso"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">ALTURA</label>
+            <InputText @bind-Value="_cargaTransporte.Altura"></InputText>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">LARGURA</label>
+                <InputText @bind-Value="_cargaTransporte.largura"></InputText>
+            </div>
+            
+            
+        </div>
+       
+        <button type="button" class="btn btn-success" >Calcular Frete</button>
+    </form>
+   
+
+
+
+</EditForm>
+@code {
+    private ClienteRequest _clienteRequest { get; set; } = new();
+    private CargaTranspote _cargaTransporte { get; set; } = new();
+
+    
+
+}
